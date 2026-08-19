@@ -1,39 +1,52 @@
 [submodule "aws-maintained/java"]
 	path = aws-maintained/java
 	url = https://github.com/aws/aws-durable-execution-sdk-java.git
+	branch = main
 [submodule "aws-maintained/js"]
 	path = aws-maintained/js
 	url = https://github.com/aws/aws-durable-execution-sdk-js.git
+	branch = main
 [submodule "aws-maintained/python"]
 	path = aws-maintained/python
 	url = https://github.com/aws/aws-durable-execution-sdk-python.git
+	branch = main
 [submodule "aws-maintained/dotnet"]
 	path = aws-maintained/dotnet
 	url = https://github.com/aws/aws-lambda-dotnet.git
+	branch = master
 [submodule "community/python-async"]
 	path = community/python-async
 	url = https://github.com/zhongkechen/async-durable-execution.git
+	branch = main
 [submodule "community/go-kurochan"]
 	path = community/go-kurochan
 	url = https://github.com/kurochan/aws-durable-execution-go.git
+	branch = main
 [submodule "community/go-dgr237"]
 	path = community/go-dgr237
 	url = https://github.com/dgr237/aws-durable-execution-sdk-go.git
+	branch = main
 [submodule "community/rust-pgdad"]
 	path = community/rust-pgdad
 	url = https://github.com/pgdad/durable-rust.git
+	branch = main
 [submodule "community/rust-alessandrobologna"]
 	path = community/rust-alessandrobologna
 	url = https://github.com/alessandrobologna/lambda-durable-execution-rust.git
+	branch = main
 [submodule "community/rust-bnusunny"]
 	path = community/rust-bnusunny
 	url = https://github.com/bnusunny/durable-execution-rust-sdk.git
+	branch = main
 [submodule "supporting/conformance-tests"]
 	path = supporting/conformance-tests
 	url = https://github.com/aws/aws-durable-execution-conformance-tests.git
+	branch = main
 [submodule "supporting/ci"]
 	path = supporting/ci
 	url = https://github.com/aws/aws-durable-execution-ci.git
+	branch = main
 [submodule "supporting/docs"]
 	path = supporting/docs
 	url = https://github.com/aws/aws-durable-execution-docs.git
+	branch = main
