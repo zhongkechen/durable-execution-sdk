@@ -8,27 +8,33 @@ Each component remains independently versioned and is included as a Git
 submodule pinned to a specific commit. Inclusion records availability and does
 not imply AWS endorsement or production support.
 
-## Status definitions
+## Community status definitions
 
 | Status | Meaning |
 | --- | --- |
-| AWS maintained | The SDK is maintained in an AWS GitHub repository. |
 | Community, conformance-tested | A community SDK runs the AWS Durable Execution conformance suite in CI. |
 | Community, independently tested | A community SDK has its own compatibility or parity tests but does not run the upstream conformance suite. |
 | Community, experimental | The repository describes itself as experimental and does not run the upstream conformance suite. |
-| Supporting repository | Shared tests, automation, or documentation rather than a language SDK. |
 
-Statuses describe the submodule revision recorded by this repository and may
-change as the component projects evolve.
+Community statuses describe the submodule revision recorded by this repository
+and may change as the component projects evolve.
 
 ## AWS-maintained SDKs
 
-| Path | Language | Repository | Status | Checks | Validation and notes |
-| --- | --- | --- | --- | --- | --- |
-| `aws-maintained/java` | Java | [`aws/aws-durable-execution-sdk-java`](https://github.com/aws/aws-durable-execution-sdk-java) | AWS maintained | [![Build](https://github.com/aws/aws-durable-execution-sdk-java/actions/workflows/build.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-java/actions/workflows/build.yml) [![Conformance](https://github.com/aws/aws-durable-execution-sdk-java/actions/workflows/conformance-tests.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-java/actions/workflows/conformance-tests.yml) | Runs the upstream conformance suite in repository CI. |
-| `aws-maintained/js` | JavaScript and TypeScript | [`aws/aws-durable-execution-sdk-js`](https://github.com/aws/aws-durable-execution-sdk-js) | AWS maintained | [![Build](https://github.com/aws/aws-durable-execution-sdk-js/actions/workflows/build.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-js/actions/workflows/build.yml) [![Conformance](https://github.com/aws/aws-durable-execution-sdk-js/actions/workflows/conformance-tests.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-js/actions/workflows/conformance-tests.yml) | Runs the upstream conformance suite in repository CI. |
-| `aws-maintained/python` | Python | [`aws/aws-durable-execution-sdk-python`](https://github.com/aws/aws-durable-execution-sdk-python) | AWS maintained | [![Build](https://github.com/aws/aws-durable-execution-sdk-python/actions/workflows/ci.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-python/actions/workflows/ci.yml) [![Conformance](https://github.com/aws/aws-durable-execution-sdk-python/actions/workflows/conformance-tests.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-python/actions/workflows/conformance-tests.yml) | Runs the upstream conformance suite in repository CI. |
-| `aws-maintained/dotnet` | .NET | [`aws/aws-lambda-dotnet`](https://github.com/aws/aws-lambda-dotnet) | AWS maintained | [![Build](https://github.com/aws/aws-lambda-dotnet/actions/workflows/aws-ci.yml/badge.svg)](https://github.com/aws/aws-lambda-dotnet/actions/workflows/aws-ci.yml) [![Conformance](https://github.com/aws/aws-lambda-dotnet/actions/workflows/conformance-tests.yml/badge.svg)](https://github.com/aws/aws-lambda-dotnet/actions/workflows/conformance-tests.yml) | Runs the upstream conformance suite in repository CI. The SDK is under `Libraries/src/Amazon.Lambda.DurableExecution`; this submodule contains the full AWS Lambda .NET monorepo. |
+| Path | Language | Repository | Checks | Validation and notes |
+| --- | --- | --- | --- | --- |
+| `aws-maintained/java` | Java | [`aws/aws-durable-execution-sdk-java`](https://github.com/aws/aws-durable-execution-sdk-java) | [![Build](https://github.com/aws/aws-durable-execution-sdk-java/actions/workflows/build.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-java/actions/workflows/build.yml) [![Conformance](https://github.com/aws/aws-durable-execution-sdk-java/actions/workflows/conformance-tests.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-java/actions/workflows/conformance-tests.yml) | Runs the upstream conformance suite in repository CI. |
+| `aws-maintained/js` | JavaScript and TypeScript | [`aws/aws-durable-execution-sdk-js`](https://github.com/aws/aws-durable-execution-sdk-js) | [![Build](https://github.com/aws/aws-durable-execution-sdk-js/actions/workflows/build.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-js/actions/workflows/build.yml) [![Conformance](https://github.com/aws/aws-durable-execution-sdk-js/actions/workflows/conformance-tests.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-js/actions/workflows/conformance-tests.yml) | Runs the upstream conformance suite in repository CI. |
+| `aws-maintained/python` | Python | [`aws/aws-durable-execution-sdk-python`](https://github.com/aws/aws-durable-execution-sdk-python) | [![Build](https://github.com/aws/aws-durable-execution-sdk-python/actions/workflows/ci.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-python/actions/workflows/ci.yml) [![Conformance](https://github.com/aws/aws-durable-execution-sdk-python/actions/workflows/conformance-tests.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-python/actions/workflows/conformance-tests.yml) | Runs the upstream conformance suite in repository CI. |
+| `aws-maintained/dotnet` | .NET | [`aws/aws-lambda-dotnet`](https://github.com/aws/aws-lambda-dotnet) | [![Build](https://github.com/aws/aws-lambda-dotnet/actions/workflows/aws-ci.yml/badge.svg)](https://github.com/aws/aws-lambda-dotnet/actions/workflows/aws-ci.yml) [![Conformance](https://github.com/aws/aws-lambda-dotnet/actions/workflows/conformance-tests.yml/badge.svg)](https://github.com/aws/aws-lambda-dotnet/actions/workflows/conformance-tests.yml) | Runs the upstream conformance suite in repository CI. The SDK is under `Libraries/src/Amazon.Lambda.DurableExecution`; this submodule contains the full AWS Lambda .NET monorepo. |
+
+## Supporting repositories
+
+| Path | Repository | Checks | Purpose |
+| --- | --- | --- | --- |
+| `supporting/conformance-tests` | [`aws/aws-durable-execution-conformance-tests`](https://github.com/aws/aws-durable-execution-conformance-tests) | [![Build](https://github.com/aws/aws-durable-execution-conformance-tests/actions/workflows/ci.yml/badge.svg)](https://github.com/aws/aws-durable-execution-conformance-tests/actions/workflows/ci.yml) | Language-neutral requirements, runner, and reusable conformance workflows. |
+| `supporting/ci` | [`aws/aws-durable-execution-ci`](https://github.com/aws/aws-durable-execution-ci) | [![AI PR Review](https://github.com/aws/aws-durable-execution-ci/actions/workflows/ai-pr-review.yml/badge.svg)](https://github.com/aws/aws-durable-execution-ci/actions/workflows/ai-pr-review.yml) | Shared GitHub Actions automation. |
+| `supporting/docs` | [`aws/aws-durable-execution-docs`](https://github.com/aws/aws-durable-execution-docs) | [![Docs](https://github.com/aws/aws-durable-execution-docs/actions/workflows/docs.yml/badge.svg)](https://github.com/aws/aws-durable-execution-docs/actions/workflows/docs.yml) [![Quality](https://github.com/aws/aws-durable-execution-docs/actions/workflows/quality.yml/badge.svg)](https://github.com/aws/aws-durable-execution-docs/actions/workflows/quality.yml) | Cross-language AWS Lambda Durable Execution documentation. |
 
 ## Community SDKs
 
@@ -42,14 +48,6 @@ change as the component projects evolve.
 The two Rust repositories are independent implementations. Their inclusion does
 not designate either one as the canonical community Rust SDK.
 
-## Supporting repositories
-
-| Path | Repository | Status | Checks | Purpose |
-| --- | --- | --- | --- | --- |
-| `supporting/conformance-tests` | [`aws/aws-durable-execution-conformance-tests`](https://github.com/aws/aws-durable-execution-conformance-tests) | Supporting repository | [![Build](https://github.com/aws/aws-durable-execution-conformance-tests/actions/workflows/ci.yml/badge.svg)](https://github.com/aws/aws-durable-execution-conformance-tests/actions/workflows/ci.yml) | Language-neutral requirements, runner, and reusable conformance workflows. |
-| `supporting/ci` | [`aws/aws-durable-execution-ci`](https://github.com/aws/aws-durable-execution-ci) | Supporting repository | [![AI PR Review](https://github.com/aws/aws-durable-execution-ci/actions/workflows/ai-pr-review.yml/badge.svg)](https://github.com/aws/aws-durable-execution-ci/actions/workflows/ai-pr-review.yml) | Shared GitHub Actions automation. |
-| `supporting/docs` | [`aws/aws-durable-execution-docs`](https://github.com/aws/aws-durable-execution-docs) | Supporting repository | [![Docs](https://github.com/aws/aws-durable-execution-docs/actions/workflows/docs.yml/badge.svg)](https://github.com/aws/aws-durable-execution-docs/actions/workflows/docs.yml) [![Quality](https://github.com/aws/aws-durable-execution-docs/actions/workflows/quality.yml/badge.svg)](https://github.com/aws/aws-durable-execution-docs/actions/workflows/quality.yml) | Cross-language AWS Lambda Durable Execution documentation. |
-
 ## Scope
 
 A repository is included when it is public and active and either:
@@ -62,13 +60,61 @@ Generated low-level AWS Lambda service clients, application demos, deployment
 frameworks, emulators, archived repositories, and empty proof-of-concept
 repositories are outside this workspace's scope.
 
+## Cross-repository contributions
+
+Each submodule is an independent repository with its own contribution process,
+branches, commits, and pull requests. Make source changes in the repository
+that owns the behavior:
+
+- SDK implementation, language-specific tests, examples, and conformance
+  handlers belong in the affected SDK repository.
+- Language-neutral requirements, the conformance runner, and reusable
+  conformance workflows belong in `supporting/conformance-tests`.
+- Shared GitHub Actions automation belongs in `supporting/ci`.
+- Cross-language documentation belongs in `supporting/docs`.
+
+For a change that spans repositories:
+
+1. Create a branch inside each affected submodule. Submodules are checked out
+   at detached commits by default, so switch to a branch before committing.
+2. Develop and commit each component change in its owning repository.
+3. Check out the related branches or commits together in this workspace and
+   run the affected SDK and conformance tests.
+4. Open separate component pull requests and link the related pull requests in
+   their descriptions. Identify any required merge order.
+5. After the component commits are available from their remotes, open a
+   workspace pull request that updates the corresponding submodule pointers.
+
+Committing at the workspace root records only submodule commit pointers; it
+does not commit uncommitted files inside a submodule. Use
+`git submodule foreach git status --short --branch` to review component state
+before updating the workspace pointers.
+
 ## Clone
+
+Initialize every repository:
 
 ```bash
 git clone --recurse-submodules https://github.com/zhongkechen/durable-execution-sdk.git
 ```
 
-For an existing clone:
+To exclude community SDKs, clone the workspace without submodules and
+initialize only the AWS-maintained SDKs and supporting repositories:
+
+```bash
+git clone https://github.com/zhongkechen/durable-execution-sdk.git
+cd durable-execution-sdk
+git submodule update --init --recursive -- aws-maintained supporting
+```
+
+The repositories under `community/` remain uninitialized. Initialize an
+individual community SDK later by its path:
+
+```bash
+git submodule update --init --recursive -- community/go
+```
+
+To initialize every submodule in an existing clone:
 
 ```bash
 git submodule update --init --recursive
