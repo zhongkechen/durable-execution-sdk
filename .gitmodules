@@ -13,15 +13,21 @@
 [submodule "community/python-async"]
 	path = community/python-async
 	url = https://github.com/zhongkechen/async-durable-execution.git
-[submodule "community/go"]
-	path = community/go
+[submodule "community/go-kurochan"]
+	path = community/go-kurochan
 	url = https://github.com/kurochan/aws-durable-execution-go.git
+[submodule "community/go-dgr237"]
+	path = community/go-dgr237
+	url = https://github.com/dgr237/aws-durable-execution-sdk-go.git
 [submodule "community/rust-pgdad"]
 	path = community/rust-pgdad
 	url = https://github.com/pgdad/durable-rust.git
 [submodule "community/rust-alessandrobologna"]
 	path = community/rust-alessandrobologna
 	url = https://github.com/alessandrobologna/lambda-durable-execution-rust.git
+[submodule "community/rust-bnusunny"]
+	path = community/rust-bnusunny
+	url = https://github.com/bnusunny/durable-execution-rust-sdk.git
 [submodule "supporting/conformance-tests"]
 	path = supporting/conformance-tests
 	url = https://github.com/aws/aws-durable-execution-conformance-tests.git
