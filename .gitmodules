@@ -16,3 +16,18 @@
 [submodule "repos/docs"]
 	path = repos/docs
 	url = https://github.com/aws/aws-durable-execution-docs.git
+[submodule "repos/sdk-dotnet"]
+	path = repos/sdk-dotnet
+	url = https://github.com/aws/aws-lambda-dotnet.git
+[submodule "repos/community/python-async"]
+	path = repos/community/python-async
+	url = https://github.com/zhongkechen/async-durable-execution.git
+[submodule "repos/community/go"]
+	path = repos/community/go
+	url = https://github.com/kurochan/aws-durable-execution-go.git
+[submodule "repos/community/rust-pgdad"]
+	path = repos/community/rust-pgdad
+	url = https://github.com/pgdad/durable-rust.git
+[submodule "repos/community/rust-alessandrobologna"]
+	path = repos/community/rust-alessandrobologna
+	url = https://github.com/alessandrobologna/lambda-durable-execution-rust.git
