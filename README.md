@@ -28,6 +28,14 @@ and may change as the component projects evolve.
 | `aws-maintained/python` | Python | [`aws/aws-durable-execution-sdk-python`](https://github.com/aws/aws-durable-execution-sdk-python) | [![Build](https://github.com/aws/aws-durable-execution-sdk-python/actions/workflows/ci.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-python/actions/workflows/ci.yml) [![Conformance](https://github.com/aws/aws-durable-execution-sdk-python/actions/workflows/conformance-tests.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-python/actions/workflows/conformance-tests.yml) | Runs the upstream conformance suite in repository CI. |
 | `aws-maintained/dotnet` | .NET | [`aws/aws-lambda-dotnet`](https://github.com/aws/aws-lambda-dotnet) | [![Build](https://github.com/aws/aws-lambda-dotnet/actions/workflows/aws-ci.yml/badge.svg)](https://github.com/aws/aws-lambda-dotnet/actions/workflows/aws-ci.yml) [![Conformance](https://github.com/aws/aws-lambda-dotnet/actions/workflows/conformance-tests.yml/badge.svg)](https://github.com/aws/aws-lambda-dotnet/actions/workflows/conformance-tests.yml) | Runs the upstream conformance suite in repository CI. The SDK is under `Libraries/src/Amazon.Lambda.DurableExecution`; this submodule contains the full AWS Lambda .NET monorepo. |
 
+## Supporting repositories
+
+| Path | Repository | Checks | Purpose |
+| --- | --- | --- | --- |
+| `supporting/conformance-tests` | [`aws/aws-durable-execution-conformance-tests`](https://github.com/aws/aws-durable-execution-conformance-tests) | [![Build](https://github.com/aws/aws-durable-execution-conformance-tests/actions/workflows/ci.yml/badge.svg)](https://github.com/aws/aws-durable-execution-conformance-tests/actions/workflows/ci.yml) | Language-neutral requirements, runner, and reusable conformance workflows. |
+| `supporting/ci` | [`aws/aws-durable-execution-ci`](https://github.com/aws/aws-durable-execution-ci) | [![AI PR Review](https://github.com/aws/aws-durable-execution-ci/actions/workflows/ai-pr-review.yml/badge.svg)](https://github.com/aws/aws-durable-execution-ci/actions/workflows/ai-pr-review.yml) | Shared GitHub Actions automation. |
+| `supporting/docs` | [`aws/aws-durable-execution-docs`](https://github.com/aws/aws-durable-execution-docs) | [![Docs](https://github.com/aws/aws-durable-execution-docs/actions/workflows/docs.yml/badge.svg)](https://github.com/aws/aws-durable-execution-docs/actions/workflows/docs.yml) [![Quality](https://github.com/aws/aws-durable-execution-docs/actions/workflows/quality.yml/badge.svg)](https://github.com/aws/aws-durable-execution-docs/actions/workflows/quality.yml) | Cross-language AWS Lambda Durable Execution documentation. |
+
 ## Community SDKs
 
 | Path | Language | Repository | Status | Checks | Validation and notes |
@@ -39,14 +47,6 @@ and may change as the component projects evolve.
 
 The two Rust repositories are independent implementations. Their inclusion does
 not designate either one as the canonical community Rust SDK.
-
-## Supporting repositories
-
-| Path | Repository | Checks | Purpose |
-| --- | --- | --- | --- |
-| `supporting/conformance-tests` | [`aws/aws-durable-execution-conformance-tests`](https://github.com/aws/aws-durable-execution-conformance-tests) | [![Build](https://github.com/aws/aws-durable-execution-conformance-tests/actions/workflows/ci.yml/badge.svg)](https://github.com/aws/aws-durable-execution-conformance-tests/actions/workflows/ci.yml) | Language-neutral requirements, runner, and reusable conformance workflows. |
-| `supporting/ci` | [`aws/aws-durable-execution-ci`](https://github.com/aws/aws-durable-execution-ci) | [![AI PR Review](https://github.com/aws/aws-durable-execution-ci/actions/workflows/ai-pr-review.yml/badge.svg)](https://github.com/aws/aws-durable-execution-ci/actions/workflows/ai-pr-review.yml) | Shared GitHub Actions automation. |
-| `supporting/docs` | [`aws/aws-durable-execution-docs`](https://github.com/aws/aws-durable-execution-docs) | [![Docs](https://github.com/aws/aws-durable-execution-docs/actions/workflows/docs.yml/badge.svg)](https://github.com/aws/aws-durable-execution-docs/actions/workflows/docs.yml) [![Quality](https://github.com/aws/aws-durable-execution-docs/actions/workflows/quality.yml/badge.svg)](https://github.com/aws/aws-durable-execution-docs/actions/workflows/quality.yml) | Cross-language AWS Lambda Durable Execution documentation. |
 
 ## Scope
 
