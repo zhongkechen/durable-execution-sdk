@@ -60,6 +60,36 @@ Generated low-level AWS Lambda service clients, application demos, deployment
 frameworks, emulators, archived repositories, and empty proof-of-concept
 repositories are outside this workspace's scope.
 
+## Cross-repository contributions
+
+Each submodule is an independent repository with its own contribution process,
+branches, commits, and pull requests. Make source changes in the repository
+that owns the behavior:
+
+- SDK implementation, language-specific tests, examples, and conformance
+  handlers belong in the affected SDK repository.
+- Language-neutral requirements, the conformance runner, and reusable
+  conformance workflows belong in `supporting/conformance-tests`.
+- Shared GitHub Actions automation belongs in `supporting/ci`.
+- Cross-language documentation belongs in `supporting/docs`.
+
+For a change that spans repositories:
+
+1. Create a branch inside each affected submodule. Submodules are checked out
+   at detached commits by default, so switch to a branch before committing.
+2. Develop and commit each component change in its owning repository.
+3. Check out the related branches or commits together in this workspace and
+   run the affected SDK and conformance tests.
+4. Open separate component pull requests and link the related pull requests in
+   their descriptions. Identify any required merge order.
+5. After the component commits are available from their remotes, open a
+   workspace pull request that updates the corresponding submodule pointers.
+
+Committing at the workspace root records only submodule commit pointers; it
+does not commit uncommitted files inside a submodule. Use
+`git submodule foreach git status --short --branch` to review component state
+before updating the workspace pointers.
+
 ## Clone
 
 ```bash
