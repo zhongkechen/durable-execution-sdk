@@ -92,11 +92,29 @@ before updating the workspace pointers.
 
 ## Clone
 
+Initialize every repository:
+
 ```bash
 git clone --recurse-submodules https://github.com/zhongkechen/durable-execution-sdk.git
 ```
 
-For an existing clone:
+To exclude community SDKs, clone the workspace without submodules and
+initialize only the AWS-maintained SDKs and supporting repositories:
+
+```bash
+git clone https://github.com/zhongkechen/durable-execution-sdk.git
+cd durable-execution-sdk
+git submodule update --init --recursive -- aws-maintained supporting
+```
+
+The repositories under `community/` remain uninitialized. Initialize an
+individual community SDK later by its path:
+
+```bash
+git submodule update --init --recursive -- community/go
+```
+
+To initialize every submodule in an existing clone:
 
 ```bash
 git submodule update --init --recursive
