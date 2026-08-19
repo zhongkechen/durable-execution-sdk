@@ -1,33 +1,33 @@
-[submodule "repos/sdk-java"]
-	path = repos/sdk-java
+[submodule "aws-maintained/java"]
+	path = aws-maintained/java
 	url = https://github.com/aws/aws-durable-execution-sdk-java.git
-[submodule "repos/sdk-js"]
-	path = repos/sdk-js
+[submodule "aws-maintained/js"]
+	path = aws-maintained/js
 	url = https://github.com/aws/aws-durable-execution-sdk-js.git
-[submodule "repos/sdk-python"]
-	path = repos/sdk-python
+[submodule "aws-maintained/python"]
+	path = aws-maintained/python
 	url = https://github.com/aws/aws-durable-execution-sdk-python.git
-[submodule "repos/conformance-tests"]
-	path = repos/conformance-tests
-	url = https://github.com/aws/aws-durable-execution-conformance-tests.git
-[submodule "repos/ci"]
-	path = repos/ci
-	url = https://github.com/aws/aws-durable-execution-ci.git
-[submodule "repos/docs"]
-	path = repos/docs
-	url = https://github.com/aws/aws-durable-execution-docs.git
-[submodule "repos/sdk-dotnet"]
-	path = repos/sdk-dotnet
+[submodule "aws-maintained/dotnet"]
+	path = aws-maintained/dotnet
 	url = https://github.com/aws/aws-lambda-dotnet.git
-[submodule "repos/community/python-async"]
-	path = repos/community/python-async
+[submodule "community/python-async"]
+	path = community/python-async
 	url = https://github.com/zhongkechen/async-durable-execution.git
-[submodule "repos/community/go"]
-	path = repos/community/go
+[submodule "community/go"]
+	path = community/go
 	url = https://github.com/kurochan/aws-durable-execution-go.git
-[submodule "repos/community/rust-pgdad"]
-	path = repos/community/rust-pgdad
+[submodule "community/rust-pgdad"]
+	path = community/rust-pgdad
 	url = https://github.com/pgdad/durable-rust.git
-[submodule "repos/community/rust-alessandrobologna"]
-	path = repos/community/rust-alessandrobologna
+[submodule "community/rust-alessandrobologna"]
+	path = community/rust-alessandrobologna
 	url = https://github.com/alessandrobologna/lambda-durable-execution-rust.git
+[submodule "supporting/conformance-tests"]
+	path = supporting/conformance-tests
+	url = https://github.com/aws/aws-durable-execution-conformance-tests.git
+[submodule "supporting/ci"]
+	path = supporting/ci
+	url = https://github.com/aws/aws-durable-execution-ci.git
+[submodule "supporting/docs"]
+	path = supporting/docs
+	url = https://github.com/aws/aws-durable-execution-docs.git
