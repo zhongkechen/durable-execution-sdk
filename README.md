@@ -14,6 +14,7 @@ not imply AWS endorsement or production support.
 | --- | --- |
 | Community, conformance-tested | A community SDK runs the AWS Durable Execution conformance suite in CI. |
 | Community, independently tested | A community SDK has its own compatibility or parity tests but does not run the upstream conformance suite. |
+| Community, self-assessed | A community SDK documents its compatibility and has local tests but does not run compatibility tests in repository CI. |
 | Community, experimental | The repository describes itself as experimental and does not run the upstream conformance suite. |
 
 Community statuses describe the submodule revision recorded by this repository
@@ -41,12 +42,14 @@ and may change as the component projects evolve.
 | Path | Language | Repository | Status | Checks | Validation and notes |
 | --- | --- | --- | --- | --- | --- |
 | `community/python-async` | Python | [`zhongkechen/async-durable-execution`](https://github.com/zhongkechen/async-durable-execution) | Community, conformance-tested | [![Build](https://github.com/zhongkechen/async-durable-execution/actions/workflows/build.yml/badge.svg)](https://github.com/zhongkechen/async-durable-execution/actions/workflows/build.yml) [![Conformance](https://github.com/zhongkechen/async-durable-execution/actions/workflows/conformance-tests.yml/badge.svg)](https://github.com/zhongkechen/async-durable-execution/actions/workflows/conformance-tests.yml) | Async-first fork that runs every upstream conformance suite with failed and uncovered requirements treated as failures. |
-| `community/go` | Go | [`kurochan/aws-durable-execution-go`](https://github.com/kurochan/aws-durable-execution-go) | Community, experimental | [![Tests](https://github.com/kurochan/aws-durable-execution-go/actions/workflows/test.yml/badge.svg)](https://github.com/kurochan/aws-durable-execution-go/actions/workflows/test.yml) | Self-described unofficial and experimental implementation. Repository CI runs its Go tests; stricter SDK compatibility coverage remains planned. |
+| `community/go-kurochan` | Go | [`kurochan/aws-durable-execution-go`](https://github.com/kurochan/aws-durable-execution-go) | Community, experimental | [![Tests](https://github.com/kurochan/aws-durable-execution-go/actions/workflows/test.yml/badge.svg)](https://github.com/kurochan/aws-durable-execution-go/actions/workflows/test.yml) | Self-described unofficial and experimental implementation. Repository CI runs its Go tests; stricter SDK compatibility coverage remains planned. |
+| `community/go-dgr237` | Go | [`dgr237/aws-durable-execution-sdk-go`](https://github.com/dgr237/aws-durable-execution-sdk-go) | Community, self-assessed | No repository CI | Provides unit tests, local replay testing utilities, static analysis, and a specification compliance report. It does not run compatibility tests in repository CI or the upstream conformance suite. |
 | `community/rust-pgdad` | Rust | [`pgdad/durable-rust`](https://github.com/pgdad/durable-rust) | Community, independently tested | [![CI](https://github.com/pgdad/durable-rust/actions/workflows/ci.yml/badge.svg)](https://github.com/pgdad/durable-rust/actions/workflows/ci.yml) | Provides a Python-Rust compliance suite and internal parity tests, but does not run the upstream conformance suite. |
 | `community/rust-alessandrobologna` | Rust | [`alessandrobologna/lambda-durable-execution-rust`](https://github.com/alessandrobologna/lambda-durable-execution-rust) | Community, experimental | [![CI](https://github.com/alessandrobologna/lambda-durable-execution-rust/actions/workflows/ci.yml/badge.svg)](https://github.com/alessandrobologna/lambda-durable-execution-rust/actions/workflows/ci.yml) | Self-described experimental implementation exercised primarily in the maintainer's workloads; repository CI runs Rust tests and lint checks. |
+| `community/rust-bnusunny` | Rust | [`bnusunny/durable-execution-rust-sdk`](https://github.com/bnusunny/durable-execution-rust-sdk) | Community, independently tested | [![PR validation](https://github.com/bnusunny/durable-execution-rust-sdk/actions/workflows/pr.yml/badge.svg)](https://github.com/bnusunny/durable-execution-rust-sdk/actions/workflows/pr.yml) | Runs lint, unit, replay, history, and cross-SDK format tests in CI and provides a manually dispatched cloud integration workflow. It does not run the upstream conformance suite. |
 
-The two Rust repositories are independent implementations. Their inclusion does
-not designate either one as the canonical community Rust SDK.
+The Go and Rust repositories are independent implementations. Their inclusion
+does not designate any one as the canonical community SDK for its language.
 
 ## Scope
 
@@ -111,7 +114,7 @@ The repositories under `community/` remain uninitialized. Initialize an
 individual community SDK later by its path:
 
 ```bash
-git submodule update --init --recursive -- community/go
+git submodule update --init --recursive -- community/go-kurochan
 ```
 
 To initialize every submodule in an existing clone:
