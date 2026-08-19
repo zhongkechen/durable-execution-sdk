@@ -1,0 +1,18 @@
+[submodule "repos/sdk-java"]
+	path = repos/sdk-java
+	url = https://github.com/aws/aws-durable-execution-sdk-java.git
+[submodule "repos/sdk-js"]
+	path = repos/sdk-js
+	url = https://github.com/aws/aws-durable-execution-sdk-js.git
+[submodule "repos/sdk-python"]
+	path = repos/sdk-python
+	url = https://github.com/aws/aws-durable-execution-sdk-python.git
+[submodule "repos/conformance-tests"]
+	path = repos/conformance-tests
+	url = https://github.com/aws/aws-durable-execution-conformance-tests.git
+[submodule "repos/ci"]
+	path = repos/ci
+	url = https://github.com/aws/aws-durable-execution-ci.git
+[submodule "repos/docs"]
+	path = repos/docs
+	url = https://github.com/aws/aws-durable-execution-docs.git
