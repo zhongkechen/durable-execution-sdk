@@ -8,4 +8,7 @@ updates:
       day: "monday"
       time: "06:00"
       timezone: "Etc/UTC"
-    open-pull-requests-limit: 13
+    groups:
+      all-submodules:
+        patterns:
+          - "*"
