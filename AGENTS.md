@@ -24,6 +24,22 @@ git submodule update --init --recursive -- aws-maintained/js supporting/conforma
 Use `git submodule update --init --recursive` only when the task genuinely
 requires the complete workspace.
 
+## Concurrent Agent Isolation
+
+When multiple AI agents are running different tasks in this workspace, each
+agent must use its own isolated Git worktree and task-specific branch before
+editing files. Do not let agents performing separate tasks share a working
+tree, even when their expected changes do not overlap.
+
+- Create temporary worktrees under the directory specified by `$TMPDIR`.
+- Use one worktree and branch per agent task.
+- Create the worktree in the repository that owns the files being changed,
+  whether that is the workspace root or a component submodule.
+- Do not switch branches, update submodules, reset, clean, or otherwise modify
+  another agent's worktree.
+- Exchange completed work through commits, patches, or cherry-picks rather than
+  by editing another agent's working files.
+
 ## Put Changes in the Owning Repository
 
 The workspace root owns only:
