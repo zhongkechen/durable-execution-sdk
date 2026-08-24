@@ -10,6 +10,10 @@
 	path = aws-maintained/python
 	url = https://github.com/aws/aws-durable-execution-sdk-python.git
 	branch = main
+[submodule "aws-maintained/rust"]
+	path = aws-maintained/rust
+	url = https://github.com/aws/aws-durable-execution-sdk-rust.git
+	branch = main
 [submodule "aws-maintained/dotnet"]
 	path = aws-maintained/dotnet
 	url = https://github.com/aws/aws-lambda-dotnet.git
