@@ -22,6 +22,10 @@
 	path = community/python-async
 	url = https://github.com/zhongkechen/async-durable-execution.git
 	branch = main
+[submodule "community/cpp"]
+	path = community/cpp
+	url = https://github.com/zhongkechen/durable-execution-cpp.git
+	branch = master
 [submodule "community/go-kurochan"]
 	path = community/go-kurochan
 	url = https://github.com/kurochan/aws-durable-execution-go.git
