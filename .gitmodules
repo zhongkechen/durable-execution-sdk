@@ -18,10 +18,6 @@
 	path = aws-maintained/dotnet
 	url = https://github.com/aws/aws-lambda-dotnet.git
 	branch = master
-[submodule "aws-maintained/go"]
-	path = aws-maintained/go
-	url = https://github.com/aws/aws-durable-execution-sdk-go.git
-	branch = alpha
 [submodule "community/python-async"]
 	path = community/python-async
 	url = https://github.com/zhongkechen/async-durable-execution.git
