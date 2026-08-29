@@ -30,6 +30,10 @@
 	path = community/kotlin
 	url = https://github.com/zhongkechen/durable-execution-kt.git
 	branch = main
+[submodule "community/typescript"]
+	path = community/typescript
+	url = https://github.com/zhongkechen/durable-execution-ts.git
+	branch = main
 [submodule "community/go-kurochan"]
 	path = community/go-kurochan
 	url = https://github.com/kurochan/aws-durable-execution-go.git
