@@ -17,6 +17,7 @@ not imply AWS endorsement or production support.
 | [`aws/aws-durable-execution-sdk-python`](https://github.com/aws/aws-durable-execution-sdk-python) (`aws-maintained/python`) | Python 3.11-3.14 | [![Build](https://github.com/aws/aws-durable-execution-sdk-python/actions/workflows/ci.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-python/actions/workflows/ci.yml) [![Conformance](https://github.com/aws/aws-durable-execution-sdk-python/actions/workflows/conformance-tests.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-python/actions/workflows/conformance-tests.yml) [![OpenTelemetry Conformance](https://github.com/aws/aws-durable-execution-sdk-python/actions/workflows/opentelemetry-conformance-tests.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-python/actions/workflows/opentelemetry-conformance-tests.yml) |
 | [`aws/aws-durable-execution-sdk-rust`](https://github.com/aws/aws-durable-execution-sdk-rust) (`aws-maintained/rust`) | Rust 1.94.1+ (experimental preview) | [![CI](https://github.com/aws/aws-durable-execution-sdk-rust/actions/workflows/ci.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-rust/actions/workflows/ci.yml) [![Conformance](https://github.com/aws/aws-durable-execution-sdk-rust/actions/workflows/conformance-tests.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-rust/actions/workflows/conformance-tests.yml) |
 | [`aws/aws-lambda-dotnet`](https://github.com/aws/aws-lambda-dotnet) (`aws-maintained/dotnet`)<sup>1</sup> | .NET 8.0, 10.0 | [![Build](https://github.com/aws/aws-lambda-dotnet/actions/workflows/aws-ci.yml/badge.svg)](https://github.com/aws/aws-lambda-dotnet/actions/workflows/aws-ci.yml) [![Conformance](https://github.com/aws/aws-lambda-dotnet/actions/workflows/conformance-tests.yml/badge.svg)](https://github.com/aws/aws-lambda-dotnet/actions/workflows/conformance-tests.yml) |
+| [`aws/aws-durable-execution-sdk-go`](https://github.com/aws/aws-durable-execution-sdk-go) (`aws-maintained/go`) | Go 1.24+ (experimental preview) | [![CI](https://github.com/aws/aws-durable-execution-sdk-go/actions/workflows/ci.yml/badge.svg?branch=alpha)](https://github.com/aws/aws-durable-execution-sdk-go/actions/workflows/ci.yml?query=branch%3Aalpha) [![Conformance](https://github.com/aws/aws-durable-execution-sdk-go/actions/workflows/conformance-tests.yml/badge.svg?branch=alpha)](https://github.com/aws/aws-durable-execution-sdk-go/actions/workflows/conformance-tests.yml?query=branch%3Aalpha) [![Cloud tests](https://github.com/aws/aws-durable-execution-sdk-go/actions/workflows/cloud-tests.yml/badge.svg?branch=alpha)](https://github.com/aws/aws-durable-execution-sdk-go/actions/workflows/cloud-tests.yml?query=branch%3Aalpha) |
 
 <sup>1</sup> The .NET SDK is under
 `Libraries/src/Amazon.Lambda.DurableExecution`; this submodule contains the full
@@ -57,8 +58,9 @@ AWS Lambda .NET monorepo.
 Community statuses describe the submodule revision recorded by this repository
 and may change as the component projects evolve.
 
-The Go and Rust repositories are independent implementations. Their inclusion
-does not designate any one as the canonical community SDK for its language.
+The community Go and Rust repositories are independent implementations. Their
+inclusion does not designate any one as the canonical community SDK for its
+language.
 
 ## Scope
 
