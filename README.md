@@ -34,6 +34,7 @@ AWS Lambda .NET monorepo.
 
 | Repository (path) | Language | Status | Checks | Validation and notes |
 | --- | --- | --- | --- | --- |
+| [`zhongkechen/async-durable-execution`](https://github.com/zhongkechen/async-durable-execution) (`community/python-async`) | Python 3.10+ | Development | [![Build](https://github.com/zhongkechen/async-durable-execution/actions/workflows/build.yml/badge.svg)](https://github.com/zhongkechen/async-durable-execution/actions/workflows/build.yml) [![Conformance](https://github.com/zhongkechen/async-durable-execution/actions/workflows/conformance-tests.yml/badge.svg)](https://github.com/zhongkechen/async-durable-execution/actions/workflows/conformance-tests.yml) | V3 development rewrite with a new journal runtime and v2 top-level API compatibility. Local contract, behavior, and example validation is in place; cloud conformance validation is pending. |
 | [`zhongkechen/durable-execution-cpp`](https://github.com/zhongkechen/durable-execution-cpp) (`community/cpp`) | C++23 | Conformance-tested | [![CI](https://github.com/zhongkechen/durable-execution-cpp/actions/workflows/ci.yml/badge.svg)](https://github.com/zhongkechen/durable-execution-cpp/actions/workflows/ci.yml) | Runs the full upstream conformance suite in repository CI with failed and uncovered requirements treated as failures. |
 | [`zhongkechen/durable-execution-kt`](https://github.com/zhongkechen/durable-execution-kt) (`community/kotlin`) | Kotlin (Java 21+) | Conformance-tested | [![CI](https://github.com/zhongkechen/durable-execution-kt/actions/workflows/ci.yml/badge.svg)](https://github.com/zhongkechen/durable-execution-kt/actions/workflows/ci.yml) [![Cloud conformance](https://github.com/zhongkechen/durable-execution-kt/actions/workflows/conformance.yml/badge.svg)](https://github.com/zhongkechen/durable-execution-kt/actions/workflows/conformance.yml) | Clean-room, coroutine-native implementation with context-free suspend operations and a Kotlin extension SPI. Runs the full upstream conformance suite in CI; the recorded revision passes 171/171 requirements. |
 | [`kurochan/aws-durable-execution-go`](https://github.com/kurochan/aws-durable-execution-go) (`community/go-kurochan`) | Go 1.25+ | Experimental | [![Tests](https://github.com/kurochan/aws-durable-execution-go/actions/workflows/test.yml/badge.svg)](https://github.com/kurochan/aws-durable-execution-go/actions/workflows/test.yml) | Self-described unofficial and experimental implementation. Repository CI runs its Go tests; stricter SDK compatibility coverage remains planned. |
@@ -46,6 +47,8 @@ AWS Lambda .NET monorepo.
 
 - **Conformance-tested:** A community SDK runs the AWS Durable Execution
   conformance suite in CI.
+- **Development:** A pre-release branch with local compatibility validation
+  whose upstream conformance validation is not yet complete.
 - **Independently tested:** A community SDK has its own compatibility or parity
   tests but does not run the upstream conformance suite.
 - **Self-assessed:** A community SDK documents its compatibility and has local
