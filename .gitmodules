@@ -1,3 +1,7 @@
+[submodule "aws-maintained/go"]
+	path = aws-maintained/go
+	url = https://github.com/aws/aws-durable-execution-sdk-go.git
+	branch = main
 [submodule "aws-maintained/java"]
 	path = aws-maintained/java
 	url = https://github.com/aws/aws-durable-execution-sdk-java.git
@@ -49,6 +53,14 @@
 [submodule "community/rust-bnusunny"]
 	path = community/rust-bnusunny
 	url = https://github.com/bnusunny/durable-execution-rust-sdk.git
+	branch = main
+[submodule "community/strands-lambda-durable-functions"]
+	path = community/strands-lambda-durable-functions
+	url = https://github.com/har1101/strands-lambda-durable-functions.git
+	branch = main
+[submodule "community/minamo"]
+	path = community/minamo
+	url = https://github.com/har1101/minamo.git
 	branch = main
 [submodule "supporting/conformance-tests"]
 	path = supporting/conformance-tests
