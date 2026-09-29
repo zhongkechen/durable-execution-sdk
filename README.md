@@ -1,8 +1,9 @@
 # Durable Execution SDK Workspace
 
 This repository provides a single workspace for active public SDKs that
-implement the AWS Lambda Durable Execution programming model, together with the
-shared conformance, CI, and documentation repositories.
+implement the AWS Lambda Durable Execution programming model, community
+extensions built on those SDKs, and shared conformance, CI, and documentation
+repositories.
 
 Each component remains independently versioned and is included as a Git
 submodule pinned to a specific commit. Inclusion records availability and does
@@ -12,6 +13,7 @@ not imply AWS endorsement or production support.
 
 | Repository (path) | Language | Checks |
 | --- | --- | --- |
+| [`aws/aws-durable-execution-sdk-go`](https://github.com/aws/aws-durable-execution-sdk-go) (`aws-maintained/go`) | Go 1.24+ (experimental preview) | [![CI](https://github.com/aws/aws-durable-execution-sdk-go/actions/workflows/ci.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-go/actions/workflows/ci.yml) [![Conformance](https://github.com/aws/aws-durable-execution-sdk-go/actions/workflows/conformance-tests.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-go/actions/workflows/conformance-tests.yml) |
 | [`aws/aws-durable-execution-sdk-java`](https://github.com/aws/aws-durable-execution-sdk-java) (`aws-maintained/java`) | Java 17+ | [![Build](https://github.com/aws/aws-durable-execution-sdk-java/actions/workflows/build.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-java/actions/workflows/build.yml) [![Conformance](https://github.com/aws/aws-durable-execution-sdk-java/actions/workflows/conformance-tests.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-java/actions/workflows/conformance-tests.yml) [![OpenTelemetry Conformance](https://github.com/aws/aws-durable-execution-sdk-java/actions/workflows/otel-conformance-tests.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-java/actions/workflows/otel-conformance-tests.yml) |
 | [`aws/aws-durable-execution-sdk-js`](https://github.com/aws/aws-durable-execution-sdk-js) (`aws-maintained/js`) | JavaScript and TypeScript (Node.js 22.x, 24.x) | [![Build](https://github.com/aws/aws-durable-execution-sdk-js/actions/workflows/build.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-js/actions/workflows/build.yml) [![Conformance](https://github.com/aws/aws-durable-execution-sdk-js/actions/workflows/conformance-tests.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-js/actions/workflows/conformance-tests.yml) [![OpenTelemetry Conformance](https://github.com/aws/aws-durable-execution-sdk-js/actions/workflows/otel-conformance-tests.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-js/actions/workflows/otel-conformance-tests.yml) |
 | [`aws/aws-durable-execution-sdk-python`](https://github.com/aws/aws-durable-execution-sdk-python) (`aws-maintained/python`) | Python 3.11-3.14 | [![Build](https://github.com/aws/aws-durable-execution-sdk-python/actions/workflows/ci.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-python/actions/workflows/ci.yml) [![Conformance](https://github.com/aws/aws-durable-execution-sdk-python/actions/workflows/conformance-tests.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-python/actions/workflows/conformance-tests.yml) [![OpenTelemetry Conformance](https://github.com/aws/aws-durable-execution-sdk-python/actions/workflows/opentelemetry-conformance-tests.yml/badge.svg)](https://github.com/aws/aws-durable-execution-sdk-python/actions/workflows/opentelemetry-conformance-tests.yml) |
@@ -56,19 +58,34 @@ AWS Lambda .NET monorepo.
 - **Experimental:** The repository describes itself as experimental and does
   not run the upstream conformance suite.
 
-Community statuses describe the submodule revision recorded by this repository
-and may change as the component projects evolve.
+Community SDK statuses describe the submodule revision recorded by this
+repository and may change as the component projects evolve.
 
 The community Go and Rust repositories are independent implementations. Their
 inclusion does not designate any one as the canonical community SDK for its
 language.
 
+## Community extensions
+
+These libraries build on the AWS-maintained JavaScript SDK, which provides
+checkpointing and replay for their agent integrations.
+
+| Repository (path) | Language | Status | Checks | Purpose and dependencies |
+| --- | --- | --- | --- | --- |
+| [`har1101/strands-lambda-durable-functions`](https://github.com/har1101/strands-lambda-durable-functions) (`community/strands-lambda-durable-functions`) | TypeScript (Node.js 22+) | Pre-1.0 | [![CI](https://github.com/har1101/strands-lambda-durable-functions/actions/workflows/ci.yml/badge.svg)](https://github.com/har1101/strands-lambda-durable-functions/actions/workflows/ci.yml) | Strands Agents integration with durable model calls, tool execution, and human approval callbacks. Requires `@strands-agents/sdk` and `@aws/durable-execution-sdk-js` as peer dependencies. |
+| [`har1101/minamo`](https://github.com/har1101/minamo) (`community/minamo`) | TypeScript (Node.js 22+) | Experimental alpha | [![CI](https://github.com/har1101/minamo/actions/workflows/ci.yml/badge.svg)](https://github.com/har1101/minamo/actions/workflows/ci.yml) | Durable AI agent loop helpers with a Lambda adapter in `@minamojs/lambda-df`. The adapter requires `@aws/durable-execution-sdk-js` as a peer dependency. |
+
+Both repositories run type checks, tests, builds, and package checks in CI on
+Node.js 22 and 24. Neither runs the upstream SDK conformance suite. Maturity
+labels describe the submodule revision recorded by this repository.
+
 ## Scope
 
-A repository is included when it is public and active and either:
+A repository is included when it is public and active and:
 
 - implements the high-level Lambda Durable Execution handler and durable
-  operation programming model; or
+  operation programming model;
+- provides reusable extensions for those SDKs; or
 - provides shared conformance, CI, or documentation for those SDKs.
 
 Generated low-level AWS Lambda service clients, application demos, deployment
@@ -85,8 +102,9 @@ Initialize every repository:
 git clone --recurse-submodules https://github.com/zhongkechen/durable-execution-sdk.git
 ```
 
-To exclude community SDKs, clone the workspace without submodules and
-initialize only the AWS-maintained SDKs and supporting repositories:
+To exclude community SDKs and extensions, clone the workspace without
+submodules and initialize only the AWS-maintained SDKs and supporting
+repositories:
 
 ```bash
 git clone https://github.com/zhongkechen/durable-execution-sdk.git
@@ -95,7 +113,7 @@ git submodule update --init --recursive -- aws-maintained supporting
 ```
 
 The repositories under `community/` remain uninitialized. Initialize an
-individual community SDK later by its path:
+individual community repository later by its path:
 
 ```bash
 git submodule update --init --recursive -- community/go-kurochan
@@ -126,8 +144,8 @@ Each submodule is an independent repository with its own contribution process,
 branches, commits, and pull requests. Make source changes in the repository
 that owns the behavior:
 
-- SDK implementation, language-specific tests, examples, and conformance
-  handlers belong in the affected SDK repository.
+- SDK and extension implementation, language-specific tests, examples, and
+  conformance handlers belong in the affected component repository.
 - Language-neutral requirements, the conformance runner, and reusable
   conformance workflows belong in `supporting/conformance-tests`.
 - Shared GitHub Actions automation belongs in `supporting/ci`.
