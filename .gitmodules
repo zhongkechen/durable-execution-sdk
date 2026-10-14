@@ -22,18 +22,6 @@
 	path = aws-maintained/dotnet
 	url = https://github.com/aws/aws-lambda-dotnet.git
 	branch = master
-[submodule "community/python-async"]
-	path = community/python-async
-	url = https://github.com/zhongkechen/async-durable-execution.git
-	branch = main
-[submodule "community/cpp"]
-	path = community/cpp
-	url = https://github.com/zhongkechen/durable-execution-cpp.git
-	branch = master
-[submodule "community/kotlin"]
-	path = community/kotlin
-	url = https://github.com/zhongkechen/durable-execution-kt.git
-	branch = main
 [submodule "community/go-kurochan"]
 	path = community/go-kurochan
 	url = https://github.com/kurochan/aws-durable-execution-go.git
